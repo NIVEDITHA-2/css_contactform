@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contact form</title>
+</head>
+<style>
+    *
+    {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'poppins', sans-serif;
+    }
+    body{
+        width: 100%;
+        min-height: 100vh;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        background: #c8e8e9;
+    }
+    .container
+    {
+        padding: 20px 60px 40px 40px;
+        background: #fff;
+        width: 90%;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    .container .content
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .container .content .left
+    {
+        width:25%;
+        height: 100%;
+        position: relative;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .content .left ::before
+    {
+        height: 70%;
+        width: 2px;
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #afafb6;
+    } 
+    .content .left .details
+    {
+        margin: 15%;
+        text-align: center;
+    }
+    .content .left .details i
+    {
+        font-size: 30px;
+        color:#3e2093 ;
+        margin-bottom: 10px;
+    }
+    .content .left .details .title
+    {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .content .left .details .para-one,
+    .content .left .details .para-two
+    {
+     font-size: 15px;
+     color: #afafb6;
+    }
+    .container .content .right
+    {
+        width:75%;
+        margin-left: 80px;
+        
+    }
+    .content .right .topic-text
+    {
+        font-size: 30px;
+        font-weight: 600;
+        color: #3e2093;
+
+    }
+    .right .input-box
+    {
+        height: 50px;
+        width: 100%;
+        margin: 12px 0;
+    }
+    .right .input-box input,
+    .right .input-box textarea
+    {
+        height: 100%;
+        width: 100%;
+        border: none;
+        font-size: 16px;
+        background: #f0f1f8;
+        border-radius: 6PX;
+        padding: 0 15px;
+        margin: 8px;
+        resize: none;
+    }
+    .right .message-box
+
+    {
+        min-height: 110px; 
+    
+    }
+    .right .button
+    {
+        margin-top: 12px;
+        display: inline-block;
+        margin-left: 10px;
+    }
+    .right .button input[type="button"]
+    {
+        color: #fff;
+        font-size: 18px;
+        outline: none;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #3e2093;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .button input[type="button"]:hover
+    {
+        background: #5029bc;
+    }
+
+    @media (max-width: 950px){
+       .container{
+        width: 90%;
+        padding: 30px 35px 40px 35px;
+        
+       }
+    }
+    @media (max-width: 820px){
+       .container{
+        width: 40px 0;
+        height: 100%;
+        
+       }
+       .container .content
+       {
+        flex-direction: column-reverse;
+       }
+       .container .content .left
+       {
+        width: 100%;
+        flex-direction: row;
+        margin-top: 40px;
+        justify-content: center;
+        flex-wrap: wrap;
+       }
+       .container .content .left::before
+       {
+        display: none;
+
+       }
+       .container .content .right
+       {
+        width: 100%;
+        margin-left: 0;
+       }
+    }
+    
+
+</style>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="left">
+                <div class="address details">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div class="title">Address</div>
+                  <div class="para-one">Sukhet,NP12</div>
+                  <div class="para-two">Birendranagar 06</div>
+                </div>
+                <div class="phone details">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="title">Phone</div>
+                    <div class="para-one">+0098 9893 5647</div>
+                    <div class="para-two">+0096 3434 5678</div>
+                  </div>
+                  <div class="email details">
+                    <i class="fas fa-envelope"></i>
+                    <div class="title">Email</div>
+                    <div class="para-one">codinglab@gmail.com</div>
+                    <div class="para-two">info.codinglab@gmail.com</div>
+                  </div>
+            </div>
+            <div class="right">
+                <div class="topic-text">Send us a message</div>
+                <p>
+                    If you have any work from me or any type of queries related to my<br> tutorial,you can send me messsage from here.Its my pleasure to help you. 
+                </p>
+            
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="Enter your name">
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Enter your email">
+                </div>
+                <div class="input-box message-box">
+                    <textarea></textarea>
+                </div>
+                <div class="button">
+                    <input type="button" value="Send Now">
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
